@@ -1,0 +1,311 @@
+:root {
+  --font-size-name-heading: clamp(18px, 5vw, 23px);
+  --font-size-section-heading: clamp(16px, 3vw, 19px);
+  --font-size-item-list: clamp(14px, 2.5vw, 17px);
+  --font-size-smallest: clamp(12px, 2vw, 15px);
+
+  --skill-color-1: #e0f7fa; /* light cyan */
+  --skill-color-2: #f1f8e9; /* light green */
+  --skill-color-3: #fff1da; /* light orange */
+  --skill-color-4: #fce4ec; /* light pink */
+  --skill-color-5: #e8eaf6; /* light indigo */
+  --skill-color-6: #f3e5f5; /* light purple */
+  --skill-color-7: #e0f2f1; /* teal tint */
+  --skill-color-8: #f9fbe7; /* lime tint */
+  --skill-color-9: #fbe9e7; /* peach tint */
+  --skill-color-10: #e1f5fe; /* light sky blue */
+}
+
+.color-1 { background-color: var(--skill-color-1); }
+.color-2 { background-color: var(--skill-color-2); }
+.color-3 { background-color: var(--skill-color-3); }
+.color-4 { background-color: var(--skill-color-4); }
+.color-5 { background-color: var(--skill-color-5); }
+.color-6 { background-color: var(--skill-color-6); }
+.color-7 { background-color: var(--skill-color-7); }
+.color-8 { background-color: var(--skill-color-8); }
+.color-9 { background-color: var(--skill-color-9); }
+.color-10 { background-color: var(--skill-color-10); }
+
+@keyframes subtle-shake {
+  0%, 100% {
+    transform: scale(1) rotate(0deg) translateX(0);
+  }
+  10% {
+    transform: scale(1.05) rotate(3deg) translateX(2px);
+  }
+  20% {
+    transform: scale(1.05) rotate(-3deg) translateX(-2px);
+  }
+  30% {
+    transform: scale(1.05) rotate(3deg) translateX(2px);
+  }
+  40% {
+    transform: scale(1.05) rotate(-3deg) translateX(-2px);
+  }
+  50%, 100% {
+    transform: scale(1) rotate(0deg) translateX(0);
+  }
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Nunito", sans-serif;
+  font-optical-sizing: auto;
+}
+
+a {
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+
+  &:hover {
+    background-color: lightgoldenrodyellow;
+    border-radius: 2px;
+  }
+}
+
+p, li, td, th {
+  font-size: var(--font-size-item-list);
+}
+
+hr {
+  margin: 4px 0 5px 0;
+}
+
+body {
+  padding: 20px 20% 50px 20%;
+
+  background-color: rgba(250, 244, 230, 0.63);
+
+  background-image: linear-gradient(to right, rgba(0, 0, 0, 0.05) 1px, transparent 1px),
+  linear-gradient(to bottom, rgba(0, 0, 0, 0.05) 1px, transparent 1px);
+
+  background-size: 28px 28px;
+}
+
+section {
+  margin-top: 24px;
+  background-color: rgba(250, 244, 230, 0.63);
+  box-shadow: 0 0 30px 10px rgba(250, 244, 230, 0.63);
+}
+
+.svg-icon-image {
+  height: 22px;
+  width: 22px;
+}
+
+.head-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+
+  .head-profile-image-wrapper {
+    position: absolute;
+    left: 0;
+    align-self: flex-end;
+  }
+
+  .head-sub-wrapper {
+    text-align: center;
+
+    .header-info-wrapper {
+      .svg-icon-image {
+        margin-right: 3px;
+      }
+    }
+  }
+
+  .header-actions-wrapper {
+    position: absolute;
+    right: 0;
+    align-self: flex-end;
+    bottom: 0;
+    display: flex;
+
+    .svg-icon-image {
+      height: 28px;
+      width: 28px;
+      cursor: pointer;
+    }
+
+    .svg-icon-image.shake-animation {
+      display: inline-block;
+      animation: subtle-shake 2s infinite ease-in-out;
+      transform-origin: center;
+    }
+  }
+
+  ul {
+    display: flex;
+
+    li {
+      display: flex;
+      align-items: center;
+      margin-right: 15px;
+      list-style-type: none;
+    }
+  }
+
+  .name-heading {
+    font-size: 32px;
+    font-weight: 400;
+    margin-bottom: 8px;
+  }
+}
+
+/*------- Reusable Classes ---------*/
+.mt-1 {
+  margin-top: 22px;
+}
+
+.font-size-smallest {
+  font-size: var(--font-size-smallest);
+}
+
+/*------- End Reusable Classes ---------*/
+
+
+/*-------- SKILLS ---------*/
+.skill-section {
+  table tr {
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+
+    th {
+      width: 200px;
+      max-width: 200px;
+      min-width: 200px;
+      text-align: left;
+    }
+
+    .skill-tag {
+      display: inline-block;
+      color: #333;
+      font-size: var(--font-size-smallest);
+      padding: 0 8px;
+      margin: 3px 5px 3px 0;
+      border-radius: 20px;
+      white-space: nowrap;
+    }
+  }
+}
+
+/*-------- END SKILLS ---------*/
+
+/*-------- EXPERIENCE ---------*/
+.experience-section {
+  table {
+    width: 100%;
+
+    tr td:nth-child(2) {
+      text-align: right;
+    }
+  }
+
+  ul {
+    padding: 0 20px;
+
+    li {
+      list-style-type: disc;
+      margin-top: 8px;
+    }
+  }
+
+}
+
+/*-------- END EXPERIENCE ---------*/
+
+
+/*-------- EDUCATION ---------*/
+.education-section {
+  table {
+    width: 100%;
+
+    tr td:nth-child(2) {
+      text-align: right;
+    }
+  }
+
+  ul {
+    padding: 0 20px;
+
+    li {
+      list-style-type: disc;
+      margin-top: 8px;
+
+    }
+  }
+}
+
+/*-------- END EDUCATION ---------*/
+
+/*-------- ACHIEVEMENT ---------*/
+.achievement-section {
+  ul {
+    padding: 0 20px;
+
+    li {
+      list-style-type: disc;
+      margin-top: 8px;
+    }
+  }
+}
+
+/*-------- END ACHIEVEMENT ---------*/
+
+
+/*-------- -------- RESPONSIVENESS -------- --------*/
+@media (max-width: 900px){
+  body {
+    padding-top: 0;
+    padding-left: 3%;
+    padding-right: 3%;
+  }
+}
+@media (max-width: 768px) {
+  body {
+    padding-top: 0;
+    padding-left: 3%;
+    padding-right: 3%;
+  }
+
+  .head-section {
+    justify-content: flex-start;
+
+    .head-sub-wrapper {
+      text-align: left;
+
+      .header-info-wrapper ul {
+        flex-direction: column;
+      }
+    }
+
+    .header-actions-wrapper {
+      position: fixed;
+      right: 10px;
+      bottom: 90px;
+      background-color: rgba(250, 244, 230, 0.9); /* optional aesthetic background */
+      padding: 6px;
+      border-radius: 50%;
+      box-shadow: 0 0 8px rgba(0,0,0,0.2);
+      z-index: 1000;
+    }
+  }
+
+  /*-------- SKILLS ---------*/
+  .skill-section {
+    table tr {
+      flex-direction: column;
+
+      td {
+        margin-bottom: 12px;
+      }
+    }
+  }
+  /*-------- END SKILLS ---------*/
+}
