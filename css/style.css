@@ -16,6 +16,13 @@
     --skill-color-10: #e1f5fe; /* light sky blue */
 }
 
+section h1,
+article h1,
+aside h1,
+nav h1 {
+    font-size: var(--font-size-name-heading);
+}
+
 .color-1 {
     background-color: var(--skill-color-1);
 }
@@ -94,6 +101,10 @@ a {
         background-color: lightgoldenrodyellow;
         border-radius: 2px;
     }
+
+    &:visited {
+        color: blue;
+    }
 }
 
 p, li, td, th {
@@ -131,11 +142,16 @@ section {
     justify-content: center;
     align-items: center;
     position: relative;
+    margin-bottom: 70px;
 
     .head-profile-image-wrapper {
-        position: absolute;
-        left: 0;
         align-self: flex-end;
+
+        img {
+            height: 150px;
+            width: 150px;
+            border-radius: 50%;
+        }
     }
 
     .head-sub-wrapper {
@@ -249,6 +265,28 @@ section {
 }
 
 /*-------- END EXPERIENCE ---------*/
+/*-------- PROJECT ---------*/
+
+.project-section {
+    table {
+        width: 100%;
+
+        tr td:nth-child(2) {
+            text-align: right;
+        }
+    }
+
+    ul {
+        padding: 0 20px;
+
+        li {
+            list-style-type: disc;
+            margin-top: 8px;
+        }
+    }
+}
+
+/*-------- END PROJECT ---------*/
 
 
 /*-------- EDUCATION ---------*/
@@ -267,7 +305,6 @@ section {
         li {
             list-style-type: disc;
             margin-top: 8px;
-
         }
     }
 }
@@ -307,9 +344,21 @@ section {
 
     .head-section {
         justify-content: flex-start;
+        margin-bottom: 30px;
+
+        .head-profile-image-wrapper {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .name-heading {
+            text-align: center;
+        }
 
         .head-sub-wrapper {
             text-align: left;
+            width: 100%;
 
             .header-info-wrapper ul {
                 flex-direction: column;
@@ -318,9 +367,9 @@ section {
 
         .header-actions-wrapper {
             position: fixed;
-            right: 10px;
+            right: 20px;
             bottom: 90px;
-            background-color: rgba(250, 244, 230, 0.9); /* optional aesthetic background */
+            background-color: rgba(250, 244, 230, 0.9);
             padding: 6px;
             border-radius: 50%;
             box-shadow: 0 0 8px rgba(0, 0, 0, 0.2);
