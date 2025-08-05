@@ -25,12 +25,12 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap"
           rel="stylesheet">
+    <script src="script.js" defer></script>
 </head>
 
 <body>
 
 <section class='head-section'>
-
     <div class="head-sub-wrapper">
         <div class="head-profile-image-wrapper">
             <img src="./assets/puja-sharma-profile-image.PNG" alt="puja sharma profile image">
@@ -56,13 +56,15 @@
     </div>
 
     <div class='header-actions-wrapper'>
-        <a href="./assets/Puja_Sharma_Resume.pdf" download="Puja_Sharma_Resume.pdf">
-            <img src="./assets/download-icon.svg" class='svg-icon-image shake-animation'
-                 alt="download puja sharma resume"
-                 title="Download Puja Sharma Resume">
-        </a>
+        <div class="action-container">
+            <a href="https://drive.google.com/file/d/1vOJShrrsuG94SsMnu2OhufWK2nO5m56G/view?usp=sharing" target="_blank"
+               rel="noreferrer" title="Drive link for Resume">
+                <img src="./assets/external-link.svg" class='svg-icon-image action-icon shake-animation'
+                     alt="drive link of puja sharma resume"
+                     title="Drive Link of Puja Sharma Resume">
+            </a>
+        </div>
     </div>
-
 </section>
 
 <section class='skill-section'>
@@ -153,7 +155,8 @@
             </li>
             <li>
                 Designed and developed the application from scratch, including the creation of scalable, <strong>reusable
-                UI components</strong>and active participation in <strong>UI/UX decision-making</strong> to align with modern design standards
+                UI components</strong>and active participation in <strong>UI/UX decision-making</strong> to align with
+                modern design standards
                 and business goals.
             </li>
         </ul>
@@ -213,7 +216,8 @@
                 side to
                 facilitate interactive coding practice and <strong>enhance learning outcomes</strong>.
             </li>
-            <li>Developed <strong>multiple dashboards</strong> using Appsmith, JavaScript, Hasura APIs, PostgreSQL, and MongoDB, such as
+            <li>Developed <strong>multiple dashboards</strong> using Appsmith, JavaScript, Hasura APIs, PostgreSQL, and
+                MongoDB, such as
                 Assignment Evaluation 2.0, Transactions Overview, etc., <strong>streamlining data management</strong>
                 and
                 improving overall
@@ -268,6 +272,39 @@
         </ul>
     </div>
     <!--  End Skillovilla Intern Experience-->
+
+    <div class="more-content-wrapper">
+        <!--  Recreate AI Intern Experience-->
+        <div class='mt-1'>
+            <table>
+                <tr>
+                    <td><strong>Frontend Developer Intern</strong></td>
+                    <td class="font-size-smallest">Nov 2021 - May 2022</td>
+                </tr>
+
+                <tr>
+                    <td><a href="#">Recreate.ai</a></td>
+                    <td class="font-size-smallest"><em>Bengaluru, India</em></td>
+                </tr>
+            </table>
+            <ul>
+                <li>
+                    Implemented new features such as applying filters on images, and background removal from an image
+                    using
+                    jQuery, HTML Canvas, and some open source libraries such as Fabric.js and Greenstock.js, also
+                    created a
+                    dashboard page for handling users' own projects.
+                </li>
+            </ul>
+        </div>
+        <!--  End Recreate AI Intern Experience-->
+    </div>
+
+    <div class="show-more-action-wrapper">
+        <button id="show-more-btn">
+            <img src="./assets/down-arrow.svg" alt="show more icon" class="svg-icon-image"/>
+        </button>
+    </div>
 </section>
 
 <section class='project-section'>

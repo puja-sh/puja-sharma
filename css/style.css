@@ -115,6 +115,13 @@ hr {
     margin: 4px 0 5px 0;
 }
 
+button {
+    outline: none;
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+}
+
 body {
     padding: 20px 20% 50px 20%;
 
@@ -172,16 +179,21 @@ section {
         display: flex;
 
         .svg-icon-image {
-            height: 28px;
-            width: 28px;
+            height: 20px;
+            width: 20px;
             cursor: pointer;
         }
 
-        .svg-icon-image.shake-animation {
-            display: inline-block;
-            animation: subtle-shake 2s infinite ease-in-out;
-            transform-origin: center;
+        .action-container {
+            display: flex;
+            align-items: center;
+            justify-content: center;
         }
+    }
+
+    .action-icon.shake-animation {
+        animation: subtle-shake 2s infinite ease-in-out;
+        transform-origin: center;
     }
 
     ul {
@@ -262,6 +274,29 @@ section {
         }
     }
 
+    .show-more-action-wrapper {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: 10px;
+    }
+
+    .more-content-wrapper {
+        height: 0;
+        overflow: hidden;
+        transition: height ease-in-out 0.5s;
+    }
+
+    .expand-content {
+        height: 200px;
+        transition: height ease-in-out 0.5s;
+    }
+
+
+    .rotate-arrow {
+        transform: rotate(180deg);
+        transition: transform ease-in-out 0.5s;
+    }
 }
 
 /*-------- END EXPERIENCE ---------*/
@@ -367,8 +402,8 @@ section {
 
         .header-actions-wrapper {
             position: fixed;
-            right: 20px;
-            bottom: 90px;
+            right: 10%;
+            bottom: 25%;
             background-color: rgba(250, 244, 230, 0.9);
             padding: 6px;
             border-radius: 50%;
