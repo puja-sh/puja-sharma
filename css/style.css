@@ -292,7 +292,6 @@ section {
         transition: height ease-in-out 0.5s;
     }
 
-
     .rotate-arrow {
         transform: rotate(180deg);
         transition: transform ease-in-out 0.5s;
@@ -403,7 +402,7 @@ section {
         .header-actions-wrapper {
             position: fixed;
             right: 10%;
-            bottom: 25%;
+            bottom: 15%;
             background-color: rgba(250, 244, 230, 0.9);
             padding: 6px;
             border-radius: 50%;
@@ -422,6 +421,14 @@ section {
             }
         }
     }
-
     /*-------- END SKILLS ---------*/
+
+    /*-------- EXPERIENCE ---------*/
+    .experience-section {
+        .expand-content {
+            height: 230px;
+        }
+    }
+
+    /*-------- EXPERIENCE ---------*/
 }
